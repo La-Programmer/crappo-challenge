@@ -1,0 +1,64 @@
+.reason {
+    margin: 0;
+    padding: 3rem;
+}
+
+.reason__top {
+    margin: 0;
+    margin-left: 7%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.reason__content {
+    display: flex;
+    align-items: center;
+    margin-top: 7%;
+    justify-content: space-between;
+}
+
+.reason__content > img {
+    flex: 0.4;
+}
+
+.text {
+    flex: 0.4;
+}
+
+.text > h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+}
+
+.text > p {
+    width: 70%;
+    line-height: 28px;
+}
+
+.text > button {
+    margin-top: 4%;
+    background: #3671E9;
+    border-radius: 5rem;
+    padding: 1rem;
+    color: white;
+}
+
+@media only screen and (max-width: 830px) {
+    .reason__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .reason__content {
+        flex-direction: column;
+    }
+
+    .reason__content > img {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+}

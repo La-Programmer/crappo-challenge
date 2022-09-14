@@ -1,0 +1,31 @@
+.services__info {
+    margin: 5rem;
+}
+
+.services__image {
+
+}
+
+.services > .services__info > p {
+    font-size: 16px;
+    margin-top: 1.5rem;
+    color: grey;
+}
+
+.services > .services__info > button {
+    margin: 2rem 0rem;
+    background: #3671E9;
+    border-radius: 5rem;
+    border: none;
+    padding: 1rem;
+    color: white;
+}
+
+@media only screen and (max-width: 830px) {
+    .services__info {
+        margin: 1rem;
+    }
+    .services__image > img{
+        width: 350px;
+    }
+}

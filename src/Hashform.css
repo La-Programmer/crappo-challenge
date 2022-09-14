@@ -1,0 +1,85 @@
+.hashform {
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    padding: 3.5rem;
+    display: flex;
+    width: 75%;
+    border-radius: 1.5rem;
+    margin-top: 28rem;
+    flex-direction: column;
+}
+
+.input__section {
+    display: flex;
+}
+
+.hash__input {
+    border: none;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+.hash__input::placeholder, .hash__input {
+    font-size: 28px;
+    color: grey;
+}
+
+.hash {
+    flex: 0.5;
+    margin-right: 5%;
+}
+
+.rate {
+    flex: 0.25;
+    margin-right: 5%;
+}
+
+.hashform > p {
+    margin: 6% 0;
+    font-size: 18px;
+}
+
+.input__section > button {
+    flex: 0.2;
+    background: #3671E9;
+    border-radius: 5rem;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+}
+
+.blue__text {
+    color: #3671E9;
+}
+
+.lil__bold {
+    font-weight: 500;
+}
+
+.grey__text {
+    color: grey;
+}
+
+@media only screen and (max-width: 830px) {
+    .hashform {
+        margin-top: 22rem;
+        padding: 2rem;
+    }
+
+    .input__section {
+        flex-direction: column;
+    }
+
+    .hash__input {
+        margin: 5%;
+    }
+
+    .hash__input::placeholder, .hash__input {
+        font-size: 18px;
+    }
+
+    .input__section > button {
+        width: 50%;
+        margin-left: 23%;
+    }
+}

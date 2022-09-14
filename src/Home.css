@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+.home {
+    font-family: 'Rubik', sans-serif;
+    background: #0d0d2b;
+}
+p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+button {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.right__arrow {
+    background: white;
+    padding: 6px;
+    width: 2rem;
+    height: 2rem;
+    color: #3671E9;
+    border: none;
+    border-radius: 50%;
+    margin-left: 1px;
+}
+
+.no__bg {
+    background: inherit;
+    color: inherit;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.top__section, .why {
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.why {
+    padding-top: 2rem;
+}
+
+.subtle__bg {
+    position: absolute;
+    
+}
+
+.rib1 {
+    margin-top: -12rem;
+    margin-left: 32%;
+}
+
+.rib2 {
+    right: 0;
+    margin-top: -21rem;
+}
+
+.why__ribbon {
+    margin-top: -20rem;
+}
+
+.why__model2 {
+    right: 0;
+}
+
+.why__model1 {
+    right: 0;
+    margin-top: -40rem;
+}
+
+.earnings {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.dark {
+    width: 100%;
+    padding-top: 18%;
+    padding-bottom: 20%;
+    text-align: center;
+    color: white;
+}
+
+.dark > h1 {
+    margin-bottom: 1rem;
+}
+
+.light {
+    width: 100%;
+    margin: 0;
+    padding-top: 24rem;
+    background: rgb(240, 240, 240);
+    text-align: center;
+}
+
+.crypto__cards {
+    display: flex;
+    padding: 2rem;
+}
+
+.market {
+    color: white;    
+    padding: 4rem;
+    background: #2B076E;
+}
+
+.market > h1 {
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+.feature__circle1 {
+    margin-top: -4rem;
+}
+
+.feature__circle2 {
+    margin-top: 90%;
+    margin-left: 74.3%;
+}
+
+.mining {
+    margin: 0;
+    padding: 6rem;
+    background: linear-gradient(to bottom, #2B076E, #0d0d2b);
+}
+
+.start {
+    padding: 4rem 3rem;
+    display: flex;
+    align-items: center;
+    background: #3671E9;
+    color: white;
+    border-radius: 1.5rem;
+}
+
+.start__text {
+    flex: 0.4;
+    margin-right: 10rem;
+}
+
+.mining__input {
+    border: none;
+    border-bottom: 1px solid white;
+    flex: 0.4;
+    background: #3671E9;
+    padding: 0.6rem;
+    font-size: 18px;
+    color: white;
+}
+
+.mining__input::placeholder {
+    font-size: 18px;
+    color: white;
+}
+
+.start__button {
+    flex: 0.15;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    margin-left: 3rem;
+}
+
+.eth__image {
+    margin-top: -1rem;
+}
+
+.btc__image {
+    margin-left: 72%;
+    margin-top: 3.8%;
+}
+
+.mine__bg {
+    margin-top: -17rem;
+}
+
+@media only screen and (max-width: 830px) {
+    .rib1{
+        margin-left: -25rem;
+    }
+
+    .why__ribbon {
+        margin-top: -35rem;
+    }
+
+    .why__model1 {
+        margin-top: -56rem;
+    }
+
+    .dark {
+        margin-top: 8rem;
+        padding: 0rem 1rem;
+        padding-bottom: 40%;
+    }
+
+    .light {
+        padding: 0rem 1rem;
+        padding-top: 25rem;
+    }
+
+    .crypto__cards {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .market {
+        width: 100%;
+    }
+
+    .feature__circle2 {
+        margin-top: -5rem;
+        margin-left: -4rem;
+        transform: rotate(180deg);
+    }
+
+    .btc__image {
+        margin-left: 12rem;
+        margin-top: 9.8rem;
+    }
+
+    .start {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .start__text {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .mining {
+        padding: 1.5rem;
+    }
+
+    .mining__input {
+        margin-bottom: 1rem;
+    }
+
+    .start__button {
+        margin-left: 0; 
+    }
+}
+
+
