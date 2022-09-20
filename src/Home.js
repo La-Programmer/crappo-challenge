@@ -4,23 +4,45 @@ import Footer from './Footer'
 import Hashform from './Hashform'
 import Header from './Header'
 import Hero from './Hero'
-// import { NavLink } from 'react-router-dom'
+import 'animate.css/animate.min.css'
 import './Home.css'
 import Reason from './Reason'
 import Services from './Services'
 import useMediaQuery from 'use-mediaquery'
 import Sidebar from './Sidebar'
-import { useTransition, animated} from 'react-spring'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+
 
 function Home() {
 
-    let firstRib = <img src={require('./images/hero-ribbon-1.png')} alt='' className='subtle__bg rib1'/>
-    let secondRib = <img src={require('./images/hero-ribbon-2.png')} alt='' className='subtle__bg rib2'/>
-    let circle1 = <img src={require('./images/features-circle-3.png')} alt='' className='subtle__bg feature__circle1'/>
-    let mineBg = <img src={require('./images/mine-bg.png')} className='mine__bg' alt=''/>
-    let whyRib = <img src={require('./images/why-ribbon.png')} alt='' className='subtle__bg why__ribbon'/>
+    const [state1, setState1] = useState(true)
+    const [state2, setState2] = useState(false)
+    const [state3, setState3] = useState(false)
 
-    const tops = [<Header />, <Sidebar />]
+    const handleClick2 = () => (
+        setState2(true), setState1(false), setState3(false)
+        )
+
+    const handleClick1 = () => (
+        setState1(true), setState2(false), setState3(false)
+    )
+
+    const handleClick3 = () => (
+        setState1(false), setState2(false), setState3(true)
+    )
+
+
+
+    let firstRib = <img src={'/images/hero-ribbon-1.png'} alt='' className='subtle__bg rib1'/>
+    let secondRib = <img src={'/images/hero-ribbon-2.png'} alt='' className='subtle__bg rib2'/>
+    let circle1 = <img src={'/images/features-circle-3.png'} alt='' className='subtle__bg feature__circle1' data-aos='zoom-in-down' data-aos-duration='2000'/>
+    let mineBg = <img src={'/images/mine-bg.png'} className='mine__bg' alt='' data-aos='fade-down' data-aos-duration='2000'/>
+    let whyRib = <img src={'/images/why-ribbon.png'} alt='' className='subtle__bg why__ribbon' data-aos='fade-right' data-aos-duration='2000'/>
+
+    const tops = [<Header/>, <Sidebar />]
 
     let top
 
@@ -37,35 +59,33 @@ function Home() {
         top = tops[0];
     }
 
-    const transitions = useTransition({
-        from: { scale: '0', y: '-5'},
-        enter: { scale: '1', y: '0'},
-        leave: { scale: '0'},
-        config: { duration: '0.5s', friction: '100', tension: '10'}
-    })
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
 
   return (
     <div className='home'>
-        <animated.div className="top__section">
+        <div className="top__section">
+        
+                {top}
             
-            {top}
-
-            <Hero />
-
+            
+                <Hero />
+            
             {firstRib}
             {secondRib}
             
-        </animated.div>
+            </div>
 
         <div className="why">
-            <Reason />
-            <img src={require('./images/why-model-1.png')} alt='' className='subtle__bg why__model1'/>
-            <img src={require('./images/why-model-2.png')} alt='' className='subtle__bg why__model2'/>
+            <Reason/>
+            <img src={'/images/why-model-1.png'} alt='' className='subtle__bg why__model1' data-aos='fade-right' data-aos-duration='1500'/>
+            <img src={'/images/why-model-2.png'} alt='' className='subtle__bg why__model2' data-aos='fade-right' data-aos-duration='1500'/>
             {whyRib}
         </div>
         <div className="earnings">
-            <div className="dark">
+            <div className="dark" data-aos='fade-right' data-aos-duration='1500' data-aos-offset='200'>
                 <h1>
                     Check how much you can earn
                 </h1>
@@ -74,37 +94,43 @@ function Home() {
                 </p>
             </div>
             <Hashform />
-            <div className="light">
+            <div className="light" data-aos='fade-up' data-aos-duration='1500' data-aos-offset='300'>
                 <h1>
                     Trade Securely and Market the High Growth Cryptocurrencies.
                 </h1>
-                <div className="crypto__cards">
-                    <Cryptocard />
+                <div className="crypto__cards" data-aos='fade-up' data-aos-duration='1500' data-aos-offset='300'>
+                    <button onClick={handleClick1}>
+                        <Cryptocard title="Bitcoin" image='/images/bitcon.png' text='Digital currency in which a record of transactions is maintained.' small='BTC' active={state1}/>
+                    </button>
 
-                    <Cryptocard />
+                    <button onClick={handleClick2} >
+                        <Cryptocard title='Ethereum' image='/images/ethereum.png' text='Blockchain texhnology to create and run decentralized applications.' small='ETH' active={state2}/>
+                    </button>
 
-                    <Cryptocard />
+                    <button onClick={handleClick3}>
+                        <Cryptocard title='Litecoin' image='/images/litecoin.png' text='Cryptocurrency that enables instant payment to anyone in the world.' small='LTC' active={state3}/>
+                    </button>
                 </div>
             </div>
         </div>
 
         <div className="market">
             {circle1}
-            <img src={require('./images/features-circle-2.png')} alt='' className='subtle__bg feature__circle2'/>
-            <h1>
+            <img src={'/images/features-circle-2.png'} alt='' className='subtle__bg feature__circle2'/>
+            <h1 data-aos='fade-up' data-aos-duration='2000'>
                 Market Sentiments, Portfolio and Run the Infrastructure of Your Choice
             </h1>
-            <Services />
+            <Services title='Invest Smart' text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur rem ducimus vitae maiores dolorum alias.' image='/images/feature-1-img.png'/>
 
-            <Services reverse={true}/>
+            <Services reverse={true} title='Detailed Statistics' text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur rem ducimus vitae maiores dolorum alias.' image='/images/feature-2-img.png'/>
 
-            <Services />
+            <Services title='Grow your Profit and Track your Investments' text='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur rem ducimus vitae maiores dolorum alias.' image='/images/feature-3-img.png'/>
         </div>
 
         <div className="mining">
-            <div className="start">
-                <img src={require('./images/ethereum-bg.png')} alt='' className='eth__image subtle__bg'/>
-                <div className="start__text">
+            <div className="start" data-aos='zoom-in' data-aos-duration='2000'>
+                <img src={'/images/ethereum-bg.png'} alt='' className='eth__image subtle__bg'/>
+                <div className="start__text" data-aos='fade-right' data-aos-duration="2000">
                     <h1>
                         Start mining now
                     </h1>
@@ -113,11 +139,10 @@ function Home() {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, saepe.
                     </p>
                 </div>
-                <input type='text' placeholder='enter message' className='mining__input'/>
-                <button className='start__button'>
+                <input type='text' placeholder='enter message' className='mining__input' data-aos='fade-right' data-aos-offset='100' data-aos-duration="2500"/>
+                <button className='start__button' data-aos='fade-right' dats-aos-offset='100' data-aos-duration="2500">
                     Subscribe
                 </button>
-                <img src={require('./images/bitcoin-bg.png')} alt='' className='btc__image subtle__bg'/>
             </div>
                 {mineBg}
         </div>

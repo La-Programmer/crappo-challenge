@@ -7,17 +7,17 @@ function Footer() {
   return (
     <div className='footer'>
         <div className="footer__container">
-            <div className="logo__section">
-                <img className='logo' src={require("./images/logo.jpg")} alt=''/>
+            <div className="logo__section" data-aos='fade-right' data-aos-duration='2000'>
+                <img className='logo' src={"/images/logo.jpg"} alt=''/>
                 <p className='logo__text'>CRAPPO</p>
             </div>
 
-            <div className="nav1">
+            <div className="nav1" data-aos='fade-up' data-aos-duration="2000">
                 <h2>
                     Quick Links
                 </h2>
 
-                <nav>
+                <nav data-aos='fade-up' data-aos-duration="2500">
                     <a href='#' className='navlink__footer'>Home</a>
                     <a href='#' className='navlink__footer'>Products</a>
                     <a href='#' className='navlink__footer'>About</a>
@@ -26,12 +26,12 @@ function Footer() {
                 </nav>
             </div>
 
-            <div className="nav2">
+            <div className="nav2" data-aos='fade-up' data-aos-duration="2000">
                 <h2>
                     Resources Links
                 </h2>
 
-                <nav>
+                <nav data-aos='fade-up' data-aos-duration="2500">
                     <a href='#' className='navlink__footer'>Download Whitepaper</a>
                     <a href='#' className='navlink__footer'>Smart Token</a>
                     <a href='#' className='navlink__footer'>Blockchain Explore</a>
@@ -40,17 +40,17 @@ function Footer() {
                 </nav>
             </div>
 
-            <div className="payments">
+            <div className="payments" data-aos='fade-up' data-aos-duration="2000">
                 <h2>
                     We accept the following payment systems
                 </h2>
 
-                <img src={require('./images/visa.png')} alt=''/>
-                <img src={require('./images/mastercard.png')} alt=''/>
-                <img src={require('./images/bitcoin-1.png')} alt=''/>
+                <img src={'/images/visa.png'} alt='' data-aos='fade-left' data-aos-duration="2500"/>
+                <img src={'/images/mastercard.png'} alt='' data-aos='fade-left' data-aos-duration="3000"/>
+                <img src={'/images/bitcoin-1.png'} alt=''data-aos='fade-left' data-aos-duration="3000"/>
             </div>
         </div>
-        <div className="footer__bottom">
+        <div className="footer__bottom" data-aos='zoom-in' data-aos-duration="2000">
             <p><FaRegCopyright />2022 CRAPPO CLONE. All rights reserved.</p>
 
             <div className="sm__links ">

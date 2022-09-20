@@ -1,9 +1,5 @@
 .services__info {
-    margin: 5rem;
-}
-
-.services__image {
-
+    margin: 3rem;
 }
 
 .services > .services__info > p {
@@ -25,7 +21,7 @@
     .services__info {
         margin: 1rem;
     }
-    .services__image > img{
+    .services > img{
         width: 350px;
     }
 }

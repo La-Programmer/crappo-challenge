@@ -1,6 +1,9 @@
 import React from 'react'
 import './Services.css'
 import useMediaQuery from 'use-mediaquery'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 function Services({title, text, image, reverse}) {
 
@@ -28,24 +31,26 @@ function Services({title, text, image, reverse}) {
         styles.alignItems = 'center';
     }
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
   return (
     <div className='services' style={styles}>
-        <div className="services__info">
+        <div className="services__info" data-aos='fade-right' data-aos-duration="2000">
             <h2>
-                Invest Smart
+                {title}
             </h2>
 
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur rem ducimus vitae maiores dolorum alias.
+                {text}
             </p>
 
             <button>
                 Learn More
             </button>
         </div>
-        <div className="services__image">
-            <img src={require('./images/feature-1-img.png')} alt=""/>
-        </div>
+            <img src={image} alt="" data-aos='zoom-in' data-aos-duration="2000"/>
     </div>
   )
 }
