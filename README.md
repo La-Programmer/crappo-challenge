@@ -16,7 +16,7 @@ Create a single-page website named "CRAPPO Web Page" with the following elements
 - **State and Props:** Utilize React state and props to manage the dynamic content and data.
 - **Styling:** Use CSS or a CSS framework to style your React components.
 - **Responsiveness:** Ensure your web page is responsive and looks good on both desktop and mobile devices.
-- **Creativity:** Feel
+- **Creativity:** Feel free to add your personal touches to the project.
  
 
 See live implementation at https://crappo-d4583.web.app/.
